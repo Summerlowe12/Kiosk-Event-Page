@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>My Links</title>
+  <meta charset="UTF-8">
+  <title>Kiosk Page</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      height: 100vh;
       margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
       background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
     .container {
       text-align: center;
     }
-    button {
-      display: block;
-      width: 220px;
-      padding: 15px;
-      margin: 15px auto;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #007bff;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      width: 380px;
+      padding: 22px;
+      margin: 22px auto;
+      font-size: 26px;
+      font-weight: bold;
+      background-color: #c62828;
       color: white;
+      border: 4px solid black;
+      border-radius: 14px;
+      cursor: pointer;
     }
-    button:hover {
-      background: #0056b3;
+
+    .btn:hover {
+      background-color: #b71c1c;
+    }
+
+    svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <button onclick="window.location.href='https://www.uc.edu/about/publicsafety/services/lost-found.html">
-      Button One
+
+    <!-- REPORT A CONCERN -->
+    <button class="btn" onclick="window.location.href='https://example.com'">
+      <!-- Warning Icon -->
+      <svg viewBox="0 0 24 24">
+        <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+      </svg>
+      Report a Concern
     </button>
 
-    <button onclick="window.location.href='https://secure.ethicspoint.com/domain/media/en/gui/22314/index.html'">
-      Button Two
+    <!-- LOST & FOUND -->
+    <button class="btn" onclick="window.location.href='https://example.com'">
+      <!-- Backpack / Lost Item Icon -->
+      <svg viewBox="0 0 24 24">
+        <path d="M7 4a5 5 0 0110 0v1h1a2 2 0 012 2v13a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h1V4zm2 1h6V4a3 3 0 00-6 0v1z"/>
+      </svg>
+      Lost &amp; Found
     </button>
+
   </div>
 </body>
 </html>
+
