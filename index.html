@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kiosk Page</title>
+  <title>Safety & Concerns</title>
 
   <style>
     body {
@@ -16,18 +16,34 @@
     }
 
     .container {
-      text-align: center;
+      width: 700px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 36px;
+      text-align: left;
     }
 
     .btn {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 16px;
-      width: 380px;
-      padding: 22px;
-      margin: 22px auto;
-      font-size: 26px;
+      justify-content: flex-start;
+      gap: 18px;
+      width: 100%;
+      padding: 26px;
+      margin: 26px 0;
+      font-size: 28px;
       font-weight: bold;
       background-color: #c62828;
       color: white;
@@ -41,9 +57,39 @@
     }
 
     svg {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       fill: white;
+      flex-shrink: 0;
+    }
+
+    .emergency-text {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #333;
+      text-align: right;
+    }
+
+    .emergency-text a {
+      color: #c62828;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer svg {
+      width: 22px;
+      height: 22px;
+      fill: #555;
     }
   </style>
 </head>
@@ -51,9 +97,13 @@
 <body>
   <div class="container">
 
+    <h1>Safety &amp; Concerns</h1>
+    <div class="subtitle">
+      Report an issue or get help with campus safety concerns
+    </div>
+
     <!-- REPORT A CONCERN -->
     <button class="btn" onclick="window.location.href='https://secure.ethicspoint.com/domain/media/en/gui/22314/index.html'">
-      <!-- Warning Icon -->
       <svg viewBox="0 0 24 24">
         <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
       </svg>
@@ -62,14 +112,26 @@
 
     <!-- LOST & FOUND -->
     <button class="btn" onclick="window.location.href='https://www.uc.edu/about/publicsafety/services/lost-found.html'">
-      <!-- Backpack / Lost Item Icon -->
       <svg viewBox="0 0 24 24">
         <path d="M7 4a5 5 0 0110 0v1h1a2 2 0 012 2v13a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h1V4zm2 1h6V4a3 3 0 00-6 0v1z"/>
       </svg>
       Lost &amp; Found
     </button>
 
+    <!-- EMERGENCY LINK -->
+    <div class="emergency-text">
+      For immediate danger, use the
+      <a onclick="window.location.href='#emergency'">Emergency feature</a>.
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 1a11 11 0 100 22 11 11 0 000-22zm-1 16l-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 8z"/>
+      </svg>
+      Reports are reviewed by campus safety staff.
+    </div>
+
   </div>
 </body>
 </html>
-
